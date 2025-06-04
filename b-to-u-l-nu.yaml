@@ -1,0 +1,398 @@
+likelihoods:
+  - name: TH-pi
+    constraints:
+      #- 'B->pi::form-factors[f_+,f_0,f_T]@LMvD:2021A;form-factors=BCL2008-4'
+      - 'B->pi::f_++f_0+f_T@FNAL+MILC:2015C;form-factors=BCL2008-4'
+      - 'B->pi::f_++f_0@RBC+UKQCD:2015A;form-factors=BCL2008-4'
+  - name: manual_FF
+    manual_constraints:
+      "B->pi::form-factor-JLQCD":
+        type: 'MultivariateGaussian(Covariance)'
+        observables: 
+         - 'B->pi::f_+(q2)'
+         - 'B->pi::f_+(q2)' 
+         - 'B->pi::f_+(q2)' 
+         - 'B->pi::f_0(q2)' 
+         - 'B->pi::f_0(q2)'
+         - 'B->pi::f_0(q2)'
+        kinematics: [{'q2': 19.15}, {'q2': 23.65}, {'q2': 26.40}, {'q2': 19.15}, {'q2': 23.65}, {'q2': 26.40}]
+        options: [{'form-factors': 'BCL2008'}, {'form-factors': 'BCL2008'}, {'form-factors': 'BCL2008'}, {'form-factors': 'BCL2008'},{'form-factors': 'BCL2008'},{'form-factors': 'BCL2008'}]
+        means : 
+          - 1.165
+          - 2.600
+          - 6.597
+          - 0.500
+          - 0.703
+          - 0.937
+        covariance: 
+          - [0.01429   , 0.0323264 , 0.0860677 , 0.00305128, 0.0037407 , 0.004545  ]
+          - [0.0323264 , 0.075545  , 0.20534226, 0.00674598, 0.00835289, 0.01015103]
+          - [0.0860677 , 0.20534226, 0.57709   , 0.01730943, 0.02127537, 0.02611902]
+          - [0.00305128, 0.00674598, 0.01730943, 0.00109   , 0.00147068, 0.00178632]
+          - [0.0037407 , 0.00835289, 0.02127537, 0.00147068, 0.002045  , 0.00246728]
+          - [0.004545  , 0.01015103, 0.02611902, 0.00178632, 0.00246728, 0.003145  ]
+
+  # - name: EXP-pi
+  #   constraints:
+  #     - 'B^0->pi^-l^+nu::BR@HFLAV:2019A;form-factors=BCL2008-4'
+
+
+priors:
+  # - name: CKM-all
+  #   parameters:
+  #    - { 'parameter': 'CKM::abs(V_ub)', 'min': 3.0e-3, 'max': 4.5e-3, 'type': 'uniform' }
+
+  # - name: CKM-pi
+  #   parameters:
+  #     - { 'parameter': 'CKM::abs(V_ub)', 'min': 2.0e-3, 'max': 5.0e-3, 'type': 'uniform' }
+  # - name: CKM-rho
+  #   parameters:
+  #     - { 'parameter': 'CKM::abs(V_ub)', 'min': 1.5e-3, 'max': 5.0e-3, 'type': 'uniform' }
+
+  # - name: CKM-omega
+  #   parameters:
+  #     - { 'parameter': 'CKM::abs(V_ub)', 'min': 1.5e-3, 'max': 5.0e-3, 'type': 'uniform' }
+
+  # - name: WET
+  #   parameters:
+  #     - { 'parameter': 'ubenue::Re{cVL}', 'min':  0.0, 'max': +1.0, 'type': 'uniform' }
+  #     - { 'parameter': 'ubenue::Re{cVR}', 'min':  0.0, 'max': +1.1, 'type': 'uniform' }
+  #     - { 'parameter': 'ubenue::Re{cSL}', 'min':  0.0, 'max': +0.7, 'type': 'uniform' }
+  #     - { 'parameter': 'ubenue::Re{cSR}', 'min': -0.7, 'max': +0.3, 'type': 'uniform' }
+  #     - { 'parameter': 'ubenue::Re{cT}',  'min': -0.25, 'max': +0.25, 'type': 'uniform' }
+
+  - name: FF-pi
+    parameters:
+      - { 'parameter':  B->pi::f_+(0)@BCL2008 , 'min':   0.21 , 'max':   0.32 , 'type': 'uniform' }
+      - { 'parameter':  B->pi::b_+^1@BCL2008  , 'min':  -3.5 , 'max':  -0.60 , 'type': 'uniform' }
+      - { 'parameter':  B->pi::b_+^2@BCL2008  , 'min':  -3.98 , 'max':   4.38 , 'type': 'uniform' }
+      - { 'parameter':  B->pi::b_+^3@BCL2008  , 'min': -18.30 , 'max':   15 , 'type': 'uniform' }
+      - { 'parameter':  B->pi::b_0^1@BCL2008  , 'min':  -1.10 , 'max':   1.35 , 'type': 'uniform' }
+      - { 'parameter':  B->pi::b_0^2@BCL2008  , 'min':  -3.00 , 'max':   4.65 , 'type': 'uniform' }
+      - { 'parameter':  B->pi::b_0^3@BCL2008  , 'min':  -4.73 , 'max':   15.0 , 'type': 'uniform' }
+      - { 'parameter':  B->pi::b_0^4@BCL2008  , 'min': -60.00 , 'max':  50.00 , 'type': 'uniform' }
+      - { 'parameter':  B->pi::f_T(0)@BCL2008 , 'min':   -1.0 , 'max':   0.52 , 'type': 'uniform' }
+      - { 'parameter':  B->pi::b_T^1@BCL2008  , 'min':  -3.91 , 'max':  -0.33 , 'type': 'uniform' }
+      - { 'parameter':  B->pi::b_T^2@BCL2008  , 'min':  -5.00 , 'max':   2.00 , 'type': 'uniform' }
+      - { 'parameter':  B->pi::b_T^3@BCL2008  , 'min':  -7.39 , 'max':  10.60 , 'type': 'uniform' }
+
+
+posteriors:
+  - name: lattice_all
+    global_options:
+      l: e
+      model: CKM
+    fixed_parameters:
+      CKM::abs(V_ub): 3.67e-3
+    prior:
+      - FF-pi
+    likelihood:
+      - TH-pi
+      - manual_FF
+
+      # - EXP-pi
+      # - EXP-rho
+      # - EXP-omega
+
+  # - name: CKM-all
+  #   global_options:
+  #     l: e
+  #     model: CKM
+  #   prior:
+  #     - CKM-all
+  #     - FF-pi
+  #     - FF-rho
+  #     - FF-omega
+  #   likelihood:
+  #     - TH-pi
+  #     - TH-rho
+  #     - TH-omega
+  #     - EXP-pi
+  #     - EXP-rho
+  #     - EXP-omega
+
+  # - name: CKM-pi
+  #   global_options:
+  #     l: e
+  #     model: CKM
+  #   prior:
+  #     - CKM-pi
+  #     - FF-pi
+  #   likelihood:
+  #     - TH-pi
+  #     - EXP-pi
+
+  # - name: CKM-rho
+  #   global_options:
+  #     l: e
+  #     model: CKM
+  #   prior:
+  #     - CKM-rho
+  #     - FF-rho
+  #   likelihood:
+  #     - TH-rho
+  #     - EXP-rho
+
+  # - name: CKM-omega
+  #   global_options:
+  #     l: e
+  #     model: CKM
+  #   prior:
+  #     - CKM-omega
+  #     - FF-omega
+  #   likelihood:
+  #     - TH-omega
+  #     - EXP-omega
+
+  # - name: WET-all
+  #   global_options:
+  #     l: e
+  #     model: WET
+  #   fixed_parameters:
+  #     CKM::abs(V_ub): 3.67e-3
+  #   prior:
+  #     - WET
+  #     - FF-pi
+  #     - FF-rho
+  #     - FF-omega
+  #   likelihood:
+  #     - TH-pi
+  #     - TH-rho
+  #     - TH-omega
+  #     - EXP-pi
+  #     - EXP-rho
+  #     - EXP-omega
+
+  # - name: WET-pi
+  #   global_options:
+  #     l: e
+  #     model: WET
+  #   fixed_parameters:
+  #     CKM::abs(V_ub): 3.67e-3
+  #   prior:
+  #     - WET
+  #     - FF-pi
+  #   likelihood:
+  #     - TH-pi
+  #     - EXP-pi
+
+  # - name: WET-rho
+  #   global_options:
+  #     l: e
+  #     model: WET
+  #   fixed_parameters:
+  #     CKM::abs(V_ub): 3.67e-3
+  #   prior:
+  #     - WET
+  #     - FF-rho
+  #   likelihood:
+  #     - TH-rho
+  #     - EXP-rho
+
+  # - name: WET-omega
+  #   global_options:
+  #     l: e
+  #     model: WET
+  #   fixed_parameters:
+  #     CKM::abs(V_ub): 3.67e-3
+  #   prior:
+  #     - WET
+  #     - FF-omega
+  #   likelihood:
+  #     - TH-omega
+  #     - EXP-omega
+
+predictions:
+
+  # We assume lepton flavor universality -- we use the same, electron Wilson
+  # coefficients for every prediction, and only change the lepton mass
+  # - name: leptonic-BR-WET-e
+  #   global_options:
+  #     l: e
+  #     model: WET
+  #   observables:
+  #     - name: B_u->lnu::BR
+
+  # - name: leptonic-BR-WET-mu
+  #   global_options:
+  #     l: e
+  #     model: WET
+  #   fixed_parameters:
+  #     mass::e: 0.105658
+  #   observables:
+  #     - name: B_u->lnu::BR
+
+  # - name: leptonic-BR-WET-tau
+  #   global_options:
+  #     l: e
+  #     model: WET
+  #   fixed_parameters:
+  #     mass::e: 1.77682
+  #   observables:
+  #     - name: B_u->lnu::BR
+
+  - name: pi-dBR-CKM
+    global_options:
+      l: e
+      q: d
+      model: CKM
+      form-factors: BCL2008
+    observables:
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  0.05 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  1.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  2.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  3.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  3.5 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  4.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  4.5 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  5.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  5.5 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  6.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  6.5 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  7.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  7.25 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  7.5 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  7.75 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  8.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  8.25 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  8.5 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  8.75 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  9.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  9.25 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  9.5 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  9.75 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  10.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  10.25 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  10.5 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  10.75 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  11.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  11.25 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  11.5 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  11.75 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  12.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  13.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  14.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  15.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  16.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  17.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  18.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  19.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  20.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  21.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  22.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  23.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  24.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  25.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  26.0 }
+      - name: B->pilnu::dBR/dq2
+        kinematics: { q2:  27.0 }
+
+  - name: pi-BR
+    global_options:
+      l: e
+      q: d
+      model: CKM
+      form-factors: BCL2008
+    fixed_parameters:
+      CKM::abs(V_ub): 1
+    observables:
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  0.05, q2_max: 27.00 }
+
+  - name: pi-BR-binned
+    global_options:
+      l: e
+      q: d
+      model: CKM
+      form-factors: BCL2008
+    fixed_parameters:
+      CKM::abs(V_ub): 1
+    observables:
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  0., q2_max: 2 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  2., q2_max: 4 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  4., q2_max: 6 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  6., q2_max: 8 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  8., q2_max: 10 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  10., q2_max: 12 }
+    
+
+
+  - name: FFsfPlus
+    global_options:
+      l: e
+      q: d
+      model: CKM
+      form-factors: BCL2008
+    observables:
+      - name: B->pi::f_+(q2)
+        kinematics: [{q2: 0   },  { q2:  1.0 }, { q2:  1.5 }, { q2:  2.0 }, { q2:  3.0 }, { q2:  4.0 }, { q2:  5.0 },
+                      { q2:  6.0 }, { q2:  7.0 }, { q2:  8.0 },{ q2:  9.0 },  { q2:  10.0 },{ q2:  11.0 },{ q2:  11.5 }, { q2:  12.0 },{ q2:  12.5 },
+                       { q2:  13.0 },{ q2:  13.5 },  { q2:  14.0 },{ q2:  14.5 },{ q2:  15.0 },{ q2:  15.5 }, { q2:  16.0 },{ q2:  16.5 }, { q2:  17.0 },
+                       { q2:  17.5},{ q2:  18.0 },{ q2:  18.5 },{ q2:  19.0 },{ q2:  19.5}, { q2:  20.0 },{ q2:  20.5 }, { q2:  21.0 }, { q2:  21.5 }, 
+                       { q2:  22.0 },{ q2:  22.5 },{ q2:  23.0 }, { q2:  23.5 },{ q2:  24.0 },{ q2:  24.5 } ,{ q2:  25.0 },{ q2:  25.5 },  { q2:  26.0 },{ q2:  26.3 }]
+  - name: FFsfZero
+    global_options:
+      l: e
+      q: d
+      model: CKM
+      form-factors: BCL2008
+    observables:
+      - name: B->pi::f_0(q2)
+        kinematics:  [{q2: 0   },  { q2:  1.0 }, { q2:  1.5 }, { q2:  2.0 }, { q2:  3.0 }, { q2:  4.0 }, { q2:  5.0 },
+                      { q2:  6.0 }, { q2:  7.0 }, { q2:  8.0 },{ q2:  9.0 },  { q2:  10.0 },{ q2:  11.0 },{ q2:  11.5 }, { q2:  12.0 },{ q2:  12.5 },
+                       { q2:  13.0 },{ q2:  13.5 },  { q2:  14.0 },{ q2:  14.5 },{ q2:  15.0 },{ q2:  15.5 }, { q2:  16.0 },{ q2:  16.5 }, { q2:  17.0 },
+                       { q2:  17.5},{ q2:  18.0 },{ q2:  18.5 },{ q2:  19.0 },{ q2:  19.5}, { q2:  20.0 },{ q2:  20.5 }, { q2:  21.0 }, { q2:  21.5 }, 
+                       { q2:  22.0 },{ q2:  22.5 },{ q2:  23.0 }, { q2:  23.5 },{ q2:  24.0 },{ q2:  24.5 } ,{ q2:  25.0 },{ q2:  25.5 },  { q2:  26.0 },{ q2:  26.3 }]
+  

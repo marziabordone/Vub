@@ -1,0 +1,63 @@
+observables:
+- kinematics:
+    q2_max: 2.0
+    q2_min: 0.0
+  name: B->pilnu::BR
+  options:
+    P: pi
+    form-factors: BCL2008
+    l: e
+    model: CKM
+    q: d
+- kinematics:
+    q2_max: 4.0
+    q2_min: 2.0
+  name: B->pilnu::BR
+  options:
+    P: pi
+    form-factors: BCL2008
+    l: e
+    model: CKM
+    q: d
+- kinematics:
+    q2_max: 6.0
+    q2_min: 4.0
+  name: B->pilnu::BR
+  options:
+    P: pi
+    form-factors: BCL2008
+    l: e
+    model: CKM
+    q: d
+- kinematics:
+    q2_max: 8.0
+    q2_min: 6.0
+  name: B->pilnu::BR
+  options:
+    P: pi
+    form-factors: BCL2008
+    l: e
+    model: CKM
+    q: d
+- kinematics:
+    q2_max: 10.0
+    q2_min: 8.0
+  name: B->pilnu::BR
+  options:
+    P: pi
+    form-factors: BCL2008
+    l: e
+    model: CKM
+    q: d
+- kinematics:
+    q2_max: 12.0
+    q2_min: 10.0
+  name: B->pilnu::BR
+  options:
+    P: pi
+    form-factors: BCL2008
+    l: e
+    model: CKM
+    q: d
+type: Prediction
+version: 1.0.15

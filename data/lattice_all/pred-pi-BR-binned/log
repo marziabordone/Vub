@@ -1,0 +1,23 @@
+2025-06-04 15:21:44,847 INFO       Creating analysis with 12 priors, 2 EOS-wide constraints, 2 global options, 1 manually-entered constraints and 1 fixed parameters.
+2025-06-04 15:21:44,848 DEBUG      priors:
+2025-06-04 15:21:44,848 DEBUG       - B->pi::f_+(0)@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG       - B->pi::b_+^1@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG       - B->pi::b_+^2@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG       - B->pi::b_+^3@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG       - B->pi::b_0^1@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG       - B->pi::b_0^2@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG       - B->pi::b_0^3@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG       - B->pi::b_0^4@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG       - B->pi::f_T(0)@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG       - B->pi::b_T^1@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG       - B->pi::b_T^2@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG       - B->pi::b_T^3@BCL2008 (uniform)
+2025-06-04 15:21:44,848 DEBUG      constraints:
+2025-06-04 15:21:44,848 DEBUG       - B->pi::f_++f_0+f_T@FNAL+MILC:2015C;form-factors=BCL2008-4
+2025-06-04 15:21:44,848 DEBUG       - B->pi::f_++f_0@RBC+UKQCD:2015A;form-factors=BCL2008-4
+2025-06-04 15:21:44,848 DEBUG      manual_constraints:
+2025-06-04 15:21:44,848 DEBUG       - B->pi::form-factor-JLQCD
+2025-06-04 15:21:44,848 DEBUG      fixed_parameters:
+2025-06-04 15:21:44,848 DEBUG       - CKM::abs(V_ub)
+2025-06-04 15:21:44,865 INPROGRESS Predicting observables from set 'pi-BR-binned' for 13453 samples
+2025-06-04 15:21:45,770 COMPLETED  ... done

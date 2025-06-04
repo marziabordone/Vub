@@ -1,0 +1,39 @@
+parameters:
+- max: 0.327
+  min: 0.287
+  name: B->pi::f_+(0)@BCL2008
+- max: 1.73
+  min: -0.89
+  name: B->pi::b_+^1@BCL2008
+- max: -0.46
+  min: -1.348
+  name: B->pi::b_+^2@BCL2008
+- max: 0.0
+  min: 0.0
+  name: B->pi::b_+^3@BCL2008
+- max: 0.0
+  min: 0.0
+  name: B->pi::b_0^1@BCL2008
+- max: 0.0
+  min: 0.0
+  name: B->pi::b_0^2@BCL2008
+- max: 0.0
+  min: 0.0
+  name: B->pi::b_0^3@BCL2008
+- max: 0.0
+  min: 0.0
+  name: B->pi::b_0^4@BCL2008
+- max: 0.0
+  min: 0.0
+  name: B->pi::f_T(0)@BCL2008
+- max: 0.0
+  min: 0.0
+  name: B->pi::b_T^1@BCL2008
+- max: 0.0
+  min: 0.0
+  name: B->pi::b_T^2@BCL2008
+- max: 0.0
+  min: 0.0
+  name: B->pi::b_T^3@BCL2008
+type: DynestyResults
+version: 1.0.15
