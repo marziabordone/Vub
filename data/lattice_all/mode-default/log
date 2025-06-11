@@ -1,57 +1,57 @@
-2025-06-04 14:22:16,866 INFO       Creating analysis with 12 priors, 2 EOS-wide constraints, 2 global options, 1 manually-entered constraints and 1 fixed parameters.
-2025-06-04 14:22:16,871 DEBUG      priors:
-2025-06-04 14:22:16,873 DEBUG       - B->pi::f_+(0)@BCL2008 (uniform)
-2025-06-04 14:22:16,873 DEBUG       - B->pi::b_+^1@BCL2008 (uniform)
-2025-06-04 14:22:16,873 DEBUG       - B->pi::b_+^2@BCL2008 (uniform)
-2025-06-04 14:22:16,873 DEBUG       - B->pi::b_+^3@BCL2008 (uniform)
-2025-06-04 14:22:16,873 DEBUG       - B->pi::b_0^1@BCL2008 (uniform)
-2025-06-04 14:22:16,873 DEBUG       - B->pi::b_0^2@BCL2008 (uniform)
-2025-06-04 14:22:16,873 DEBUG       - B->pi::b_0^3@BCL2008 (uniform)
-2025-06-04 14:22:16,873 DEBUG       - B->pi::b_0^4@BCL2008 (uniform)
-2025-06-04 14:22:16,873 DEBUG       - B->pi::f_T(0)@BCL2008 (uniform)
-2025-06-04 14:22:16,873 DEBUG       - B->pi::b_T^1@BCL2008 (uniform)
-2025-06-04 14:22:16,884 DEBUG       - B->pi::b_T^2@BCL2008 (uniform)
-2025-06-04 14:22:16,884 DEBUG       - B->pi::b_T^3@BCL2008 (uniform)
-2025-06-04 14:22:16,884 DEBUG      constraints:
-2025-06-04 14:22:16,884 DEBUG       - B->pi::f_++f_0+f_T@FNAL+MILC:2015C;form-factors=BCL2008-4
-2025-06-04 14:22:16,884 DEBUG       - B->pi::f_++f_0@RBC+UKQCD:2015A;form-factors=BCL2008-4
-2025-06-04 14:22:16,884 DEBUG      manual_constraints:
-2025-06-04 14:22:16,884 DEBUG       - B->pi::form-factor-JLQCD
-2025-06-04 14:22:16,935 DEBUG      fixed_parameters:
-2025-06-04 14:22:16,935 DEBUG       - CKM::abs(V_ub)
-2025-06-04 14:22:16,947 INPROGRESS Beginning minimization in 10 points
-2025-06-04 14:22:16,949 INFO       Using a starting point based on the existing importance samples
-2025-06-04 14:22:16,956 INFO       Using starting point [ 0.2539, -1.591, -2.295, -4.304, 0.7102, 0.04692, 1.044, -3.384, 0.4941, -0.3673, 1.481, 4.65 ]
-2025-06-04 14:22:17,337 SUCCESS    Optimization goal achieved after 1216 function evaluations
-2025-06-04 14:22:18,063 INFO       First optimization finished
-2025-06-04 14:22:18,182 SUCCESS    Optimization goal achieved after 352 function evaluations
-2025-06-04 14:22:18,327 SUCCESS    Optimization goal achieved after 385 function evaluations
-2025-06-04 14:22:18,448 SUCCESS    Optimization goal achieved after 380 function evaluations
-2025-06-04 14:22:18,610 SUCCESS    Optimization goal achieved after 480 function evaluations
-2025-06-04 14:22:18,737 SUCCESS    Optimization goal achieved after 365 function evaluations
-2025-06-04 14:22:18,832 SUCCESS    Optimization goal achieved after 272 function evaluations
-2025-06-04 14:22:18,941 SUCCESS    Optimization goal achieved after 351 function evaluations
-2025-06-04 14:22:19,032 SUCCESS    Optimization goal achieved after 290 function evaluations
-2025-06-04 14:22:19,142 SUCCESS    Optimization goal achieved after 345 function evaluations
-2025-06-04 14:22:19,143 COMPLETED  ... optimization finished
-2025-06-04 14:22:19,143 INFO       The best-fit point is:
-2025-06-04 14:22:19,144 INFO         - B->pi::f_+(0)@BCL2008 -> 0.2479963428931583
-2025-06-04 14:22:19,144 INFO         - B->pi::b_+^1@BCL2008 -> -1.6940009834432654
-2025-06-04 14:22:19,145 INFO         - B->pi::b_+^2@BCL2008 -> -2.074705493666469
-2025-06-04 14:22:19,145 INFO         - B->pi::b_+^3@BCL2008 -> -3.2414962838556574
-2025-06-04 14:22:19,145 INFO         - B->pi::b_0^1@BCL2008 -> 0.7605820958508505
-2025-06-04 14:22:19,146 INFO         - B->pi::b_0^2@BCL2008 -> 0.2277204047999794
-2025-06-04 14:22:19,146 INFO         - B->pi::b_0^3@BCL2008 -> 0.5675529300777913
-2025-06-04 14:22:19,147 INFO         - B->pi::b_0^4@BCL2008 -> -5.748028597318103
-2025-06-04 14:22:19,147 INFO         - B->pi::f_T(0)@BCL2008 -> 0.2916300719940164
-2025-06-04 14:22:19,148 INFO         - B->pi::b_T^1@BCL2008 -> -1.454156992941079
-2025-06-04 14:22:19,148 INFO         - B->pi::b_T^2@BCL2008 -> -0.6343913866255888
-2025-06-04 14:22:19,149 INFO         - B->pi::b_T^3@BCL2008 -> 1.6973383682996832
-2025-06-04 14:22:19,149 INFO       total chi^2 = 38.48
-2025-06-04 14:22:19,149 INFO       total dof   = 11
-2025-06-04 14:22:19,152 INFO       p value     = 0.01%
-2025-06-04 14:22:19,152 INFO       individual test statistics:
-2025-06-04 14:22:19,154 INFO         - B->pi::f_++f_0+f_T@FNAL+MILC:2015C: chi^2 / dof = 16.06 / 11, local_pvalue = 13.87%
-2025-06-04 14:22:19,155 INFO         - B->pi::f_++f_0@RBC+UKQCD:2015A: chi^2 / dof = 14.31 / 6, local_pvalue = 2.63%
-2025-06-04 14:22:19,169 INFO         - B->pi::form-factor-JLQCD: chi^2 / dof = 8.11 / 6, local_pvalue = 23.04%
-2025-06-04 14:22:19,182 WARNING    Final p value is 0.01%, which is below the a-priori threshold 3%
+2025-06-10 14:56:03,208 INFO       Creating analysis with 12 priors, 2 EOS-wide constraints, 2 global options, 1 manually-entered constraints and 1 fixed parameters.
+2025-06-10 14:56:03,214 DEBUG      priors:
+2025-06-10 14:56:03,217 DEBUG       - B->pi::f_+(0)@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG       - B->pi::b_+^1@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG       - B->pi::b_+^2@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG       - B->pi::b_+^3@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG       - B->pi::b_0^1@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG       - B->pi::b_0^2@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG       - B->pi::b_0^3@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG       - B->pi::b_0^4@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG       - B->pi::f_T(0)@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG       - B->pi::b_T^1@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG       - B->pi::b_T^2@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG       - B->pi::b_T^3@BCL2008 (uniform)
+2025-06-10 14:56:03,217 DEBUG      constraints:
+2025-06-10 14:56:03,217 DEBUG       - B->pi::f_++f_0+f_T@FNAL+MILC:2015C;form-factors=BCL2008-4
+2025-06-10 14:56:03,217 DEBUG       - B->pi::f_++f_0@RBC+UKQCD:2015A;form-factors=BCL2008-4
+2025-06-10 14:56:03,217 DEBUG      manual_constraints:
+2025-06-10 14:56:03,217 DEBUG       - B->pi::form-factor-JLQCD
+2025-06-10 14:56:03,217 DEBUG      fixed_parameters:
+2025-06-10 14:56:03,217 DEBUG       - CKM::abs(V_ub)
+2025-06-10 14:56:03,693 INPROGRESS Beginning minimization in 10 points
+2025-06-10 14:56:03,693 INFO       Using a starting point based on the existing importance samples
+2025-06-10 14:56:03,696 INFO       Using starting point [ 0.2539, -1.591, -2.295, -4.304, 0.7102, 0.04692, 1.044, -3.384, 0.4941, -0.3673, 1.481, 4.65 ]
+2025-06-10 14:56:03,969 SUCCESS    Optimization goal achieved after 922 function evaluations
+2025-06-10 14:56:03,969 INFO       First optimization finished
+2025-06-10 14:56:04,082 SUCCESS    Optimization goal achieved after 373 function evaluations
+2025-06-10 14:56:04,221 SUCCESS    Optimization goal achieved after 370 function evaluations
+2025-06-10 14:56:04,326 SUCCESS    Optimization goal achieved after 357 function evaluations
+2025-06-10 14:56:04,417 SUCCESS    Optimization goal achieved after 316 function evaluations
+2025-06-10 14:56:04,501 SUCCESS    Optimization goal achieved after 299 function evaluations
+2025-06-10 14:56:04,592 SUCCESS    Optimization goal achieved after 318 function evaluations
+2025-06-10 14:56:04,695 SUCCESS    Optimization goal achieved after 357 function evaluations
+2025-06-10 14:56:04,759 SUCCESS    Optimization goal achieved after 250 function evaluations
+2025-06-10 14:56:04,821 SUCCESS    Optimization goal achieved after 219 function evaluations
+2025-06-10 14:56:04,822 COMPLETED  ... optimization finished
+2025-06-10 14:56:04,822 INFO       The best-fit point is:
+2025-06-10 14:56:04,822 INFO         - B->pi::f_+(0)@BCL2008 -> 0.2479854739987436
+2025-06-10 14:56:04,823 INFO         - B->pi::b_+^1@BCL2008 -> -1.6941501171659255
+2025-06-10 14:56:04,823 INFO         - B->pi::b_+^2@BCL2008 -> -2.075060872294736
+2025-06-10 14:56:04,823 INFO         - B->pi::b_+^3@BCL2008 -> -3.241426391261407
+2025-06-10 14:56:04,824 INFO         - B->pi::b_0^1@BCL2008 -> 0.7605873055703772
+2025-06-10 14:56:04,825 INFO         - B->pi::b_0^2@BCL2008 -> 0.2274590034637396
+2025-06-10 14:56:04,825 INFO         - B->pi::b_0^3@BCL2008 -> 0.5669475088201246
+2025-06-10 14:56:04,825 INFO         - B->pi::b_0^4@BCL2008 -> -5.74839574933888
+2025-06-10 14:56:04,826 INFO         - B->pi::f_T(0)@BCL2008 -> 0.29147886331031814
+2025-06-10 14:56:04,826 INFO         - B->pi::b_T^1@BCL2008 -> -1.4553492749289882
+2025-06-10 14:56:04,826 INFO         - B->pi::b_T^2@BCL2008 -> -0.637727056661276
+2025-06-10 14:56:04,827 INFO         - B->pi::b_T^3@BCL2008 -> 1.6926997192689024
+2025-06-10 14:56:04,827 INFO       total chi^2 = 38.48
+2025-06-10 14:56:04,828 INFO       total dof   = 11
+2025-06-10 14:56:04,829 INFO       p value     = 0.01%
+2025-06-10 14:56:04,829 INFO       individual test statistics:
+2025-06-10 14:56:04,830 INFO         - B->pi::f_++f_0+f_T@FNAL+MILC:2015C: chi^2 / dof = 16.07 / 11, local_pvalue = 13.87%
+2025-06-10 14:56:04,831 INFO         - B->pi::f_++f_0@RBC+UKQCD:2015A: chi^2 / dof = 14.31 / 6, local_pvalue = 2.63%
+2025-06-10 14:56:04,832 INFO         - B->pi::form-factor-JLQCD: chi^2 / dof = 8.11 / 6, local_pvalue = 23.05%
+2025-06-10 14:56:04,834 WARNING    Final p value is 0.01%, which is below the a-priori threshold 3%

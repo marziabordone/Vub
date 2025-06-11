@@ -366,6 +366,21 @@ predictions:
         kinematics: { q2_min:  8., q2_max: 10 }
       - name: B->pilnu::BR
         kinematics: { q2_min:  10., q2_max: 12 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  12., q2_max: 14 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  14., q2_max: 16 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  16., q2_max: 18 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  18., q2_max: 20 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  20., q2_max: 22 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  22., q2_max: 24 }
+      - name: B->pilnu::BR
+        kinematics: { q2_min:  24., q2_max: 26.4 }
+    
     
 
 
